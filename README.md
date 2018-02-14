@@ -13,6 +13,11 @@ AWS have democratised many complex computational elements (particularly in the r
 SafeHaven is only possible because DeepLens allows us to deploy a light-weight, yet powerful Face-Detection neural network to a compact device. DeepLens minimises network traffic, so we don't need to stream high volumes of video data to the cloud.
 
 
+## Important DeepLens Note
+
+We have implemented the standard DeepLens Face-Detection model. As such, we have not included json model or parameter files in this repo.
+
+
 ## Files included in this repo
 
 #### Overview
