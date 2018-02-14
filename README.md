@@ -51,6 +51,7 @@ All of the elements below should be created in the US-EAST-1 (N. Virginia) regio
 
 ## IAM Roles
 LambdaRekognitionRole – Attach a new policy called ‘LambdaPermissions’ – see LambdaPermissions.json – You will need to edit the policies to replace the account numbers with your own.
+
 DoorLambdaAlexaSkillRole – Attach a new policy called ‘AlexaSkillPolicy’ – see AlexaSkillPolicy.json
 
 
@@ -75,8 +76,10 @@ DoorLambdaAlexaSkillRole – Attach a new policy called ‘AlexaSkillPolicy’ �
 
 
 ## Alexa Skill
-                Need to create a new Alexa skill, and get the Skill Id (as this is required within the lambda function configuration)
-                (Alexa Skill setup is beyond the scope of this guide)
+
+Need to create a new Alexa skill, and get the Skill Id (as this is required within the lambda function configuration)
+
+Alexa Skill setup is beyond the scope of this guide.
 
 
 ## Lambda Functions
@@ -88,11 +91,11 @@ a.	Edit the ‘greengrassHelloWorld.py’ script, change the bucket names in lin
 
 2)	Create **‘safe-haven-rekognition-image-upload’** lambda function, selecting **Python 2.7**. The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
 
-a.	Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
+2.1) Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
 
-b.	Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
+2.2) Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
 
-c.	Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
+2.3) Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
 
 
 3)	Create **‘safe-haven-analyse-faces-function’** lambda function, selecting **Python 2.7**.  The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
