@@ -87,15 +87,15 @@ Alexa Skill setup is beyond the scope of this guide.
 
 _N.B. This function may already have been created as part of the AWS DeepLens initial setup – if that is the case, upload the .zip file included here and publish a new version of the function_
 
-a.	Edit the ‘greengrassHelloWorld.py’ script, change the bucket names in lines 54 & 56 to be the S3 bucket you setup previously
+  a.	Edit the ‘greengrassHelloWorld.py’ script, change the bucket names in lines 54 & 56 to be the S3 bucket you setup previously
 
 2)	Create **‘safe-haven-rekognition-image-upload’** lambda function, selecting **Python 2.7**. The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
 
-a. Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
+  a. Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
 
-b. Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
+  b. Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
 
-c. Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
+  c. Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
 
 
 3)	Create **‘safe-haven-analyse-faces-function’** lambda function, selecting **Python 2.7**.  The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
