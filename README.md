@@ -33,7 +33,7 @@ safe-haven-who-is-at-the-door-function.zip =
 
 
 
-#### Folder structure in the AWS S3 Bucket called “safe-haven-images” (also see Architecture PDF)
+## Folder structure in the AWS S3 Bucket called “safe-haven-images” (also see Architecture PDF)
 
 -- **"DeepLens"**: Output from deeplens – when a face is detected, the whole frame image is uploaded. A trigger on this bucket runs the lambda function “safe-haven-analyse-faces-function”
 
