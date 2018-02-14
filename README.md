@@ -71,8 +71,8 @@ DoorLambdaAlexaSkillRole – Attach a new policy called ‘AlexaSkillPolicy’ �
 
 ## DynamoDB Tables
 1)	Create a new table to store the Rekognition collection IDs and people names – see see safe-haven-rekognition-collection.txt script script
-2)	Create a new table to store the face detection history – see **safe-haven-facial-history.txt script**
-3)	Create a new table to store the last person detected – see **safe-haven-last-person.txt script**
+2)	Create a new table to store the face detection history – see **safe-haven-facial-history.txt** script
+3)	Create a new table to store the last person detected – see **safe-haven-last-person.txt** script
 
 
 ## SNS
