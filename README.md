@@ -15,7 +15,7 @@ SafeHaven is only possible because DeepLens allows us to deploy a light-weight, 
 
 ## Important DeepLens Note
 
-We have implemented the standard DeepLens Face-Detection model. As such, we have not included json model or parameter files in this repo.
+We have implemented the standard **deeplens-face-detection** model. As such, we have not included json model or parameter files in this repo. When creating your DeepLens project, please package the standard model with the **lambda function called "deeplens-face-detection", which _is_ included in this repo**.
 
 
 ## Files included in this repo
