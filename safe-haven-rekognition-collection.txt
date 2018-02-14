@@ -1,0 +1,5 @@
+aws dynamodb create-table --table-name safe-haven-rekognition-collection \
+--attribute-definitions AttributeName=RekognitionId,AttributeType=S \
+--key-schema AttributeName=RekognitionId,KeyType=HASH \
+--provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+--region us-east-1

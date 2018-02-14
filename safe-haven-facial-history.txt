@@ -1,0 +1,5 @@
+aws dynamodb create-table --table-name safe-haven-facial-history \
+--attribute-definitions AttributeName=UniqueId,AttributeType=S \
+--key-schema AttributeName=UniqueId,KeyType=HASH \
+--provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+--region us-east-1

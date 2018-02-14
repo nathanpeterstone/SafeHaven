@@ -1,0 +1,69 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "rekognition:DetectFaces",
+                "rekognition:IndexFaces",
+                "sns:ListTopics",
+                "sns:CreatePlatformEndpoint",
+                "sns:Unsubscribe",
+                "s3:ListObjects",
+                "sns:CheckIfPhoneNumberIsOptedOut",
+                "sns:OptInPhoneNumber",
+                "sns:SetEndpointAttributes",
+                "sns:ListEndpointsByPlatformApplication",
+                "sns:DeletePlatformApplication",
+                "sns:SetPlatformApplicationAttributes",
+                "s3:HeadBucket",
+                "rekognition:SearchFacesByImage",
+                "sns:CreatePlatformApplication",
+                "sns:SetSMSAttributes",
+                "sns:GetPlatformApplicationAttributes",
+                "sns:GetSubscriptionAttributes",
+                "sns:ListSubscriptions",
+                "sns:DeleteEndpoint",
+                "sns:ListPhoneNumbersOptedOut",
+                "sns:GetEndpointAttributes",
+                "sns:SetSubscriptionAttributes",
+                "s3:ListAllMyBuckets",
+                "sns:ListPlatformApplications",
+                "sns:GetSMSAttributes"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "sns:*",
+                "logs:CreateLogStream",
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "logs:PutLogEvents",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": [
+                "arn:aws:sns:us-east-1:[99999999999999]:NotifyMe",
+                "arn:aws:logs:*:*:*",
+                "arn:aws:dynamodb:us-east-1:[99999999999999]:table/safe-haven-rekognition-collection",
+                "arn:aws:dynamodb:us-east-1:[99999999999999]:table/safe-haven-facial-history",
+                "arn:aws:dynamodb:us-east-1:[99999999999999]:table/safe-haven-last-person"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::safe-haven-images/*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:*:*:*"
+        }
+    ]
+}
