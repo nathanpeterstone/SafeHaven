@@ -81,29 +81,57 @@ DoorLambdaAlexaSkillRole – Attach a new policy called ‘AlexaSkillPolicy’ �
 
 ## Lambda Functions
 1)	Create **‘deeplens-facial-detection’** lambda function, selecting **Python 2.7**.  The zip file included here should be uploaded. This function should run under the **AWSDeepLensLambdaRole**.
-N.B. This function may already have been created as part of the AWS DeepLens initial setup – if that is the case, upload the .zip file included here and publish a new version of the function
+
+_N.B. This function may already have been created as part of the AWS DeepLens initial setup – if that is the case, upload the .zip file included here and publish a new version of the function_
+
 a.	Edit the ‘greengrassHelloWorld.py’ script, change the bucket names in lines 54 & 56 to be the S3 bucket you setup previously
-2)	Create ‘safe-haven-rekognition-image-upload’ lambda function, selecting Python 2.7. The zip file included here should be uploaded.  This function should run under the LambdaRekognitionRole.
-a.	Edit the ‘lambda_function.py’ script, change line 11 to be the DynamoDB table for the Rekognition Collection
-b.	Edit the ‘lambda_function.py’ script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
-c.	Add a trigger from S3, using the bucket created earlier, the prefix ‘Rekognition-Images/’, Event Type ObjectCreated, Suffix jpg
-3)	Create ‘safe-haven-analyse-faces-function’ lambda function, selecting Python 2.7.  The zip file included here should be uploaded.  This function should run under the LambdaRekognitionRole.
-a.	Edit the ‘lambda_function.py’ script, change line 13 to be the Rekognition Collection name (as per the Rekognition setup)
-b.	Edit the ‘lambda_function.py’ script, change line 14 to be the DynamoDB table for the face detection history
-c.	Edit the ‘lambda_function.py’ script, change line 15 to be the DynamoDB table for the last person detected
-d.	Edit the ‘lambda_function.py’ script, change line 16 to be the SNS ARN
+
+2)	Create **‘safe-haven-rekognition-image-upload’** lambda function, selecting **Python 2.7**. The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
+
+a.	Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
+
+b.	Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
+
+c.	Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
+
+
+3)	Create **‘safe-haven-analyse-faces-function’** lambda function, selecting **Python 2.7**.  The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
+
+a.	Edit the **‘lambda_function.py’** script, change line 13 to be the Rekognition Collection name (as per the Rekognition setup)
+
+b.	Edit the **‘lambda_function.py’** script, change line 14 to be the DynamoDB table for the face detection history
+
+c.	Edit the **‘lambda_function.py’** script, change line 15 to be the DynamoDB table for the last person detected
+
+d.	Edit the **‘lambda_function.py’** script, change line 16 to be the SNS ARN
+
 e.	Add the following Environment variables:
-i.	unknown_images_bucket            [This should be your S3 bucket name]
-ii.	unknown_images_folder           Unknown-Images
-f.	Add a trigger from S3, using the bucket created earlier, the prefix ‘DeepLens/’, Event Type ObjectCreated, Suffix jpg
+
+---- i.	unknown_images_bucket            [This should be your S3 bucket name]
+
+---- ii.	unknown_images_folder           Unknown-Images
+
+
+f.	Add a trigger from **S3**, using the bucket created earlier, the prefix **‘DeepLens/’**, Event Type **ObjectCreated**, Suffix **jpg**
+
+
 4)	Create ‘safe-haven-who-is-at-the-door-function’ lambda function, selecting Python 3.6.  The zip file included here should be uploaded.  This function should run under the DoorLambdaAlexaSkillRole.
-a.	Add the following Environment variables:
-i.	unique_id           [Any value you want as it is not used]
-ii.	greeting_msg    Welcome to Safe Haven.  Just ask me who is at the door.
-iii.	metrics_table    [DynamoDB table for the last person detected]
-iv.	intent_name     WhoIsAtTheDoor
-v.	slot_name          metric
-vi.	exit_msg             Thank you for using Safe Haven. Have a nice day!
-b.	Add a trigger from Alexa Skills Kit, entering your Alexa Skill Id where necessary
+
+-- a.	Add the following Environment variables:
+
+---- i.	unique_id           [Any value you want as it is not used]
+
+---- ii.	greeting_msg    Welcome to Safe Haven.  Just ask me who is at the door.
+
+---- iii.	metrics_table    [DynamoDB table for the last person detected]
+
+---- iv.	intent_name     WhoIsAtTheDoor
+
+---- v.	slot_name          metric
+
+---- vi.	exit_msg             Thank you for using Safe Haven. Have a nice day!
+
+
+-- b.	Add a trigger from Alexa Skills Kit, entering your Alexa Skill Id where necessary
 
 
