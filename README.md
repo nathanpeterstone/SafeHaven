@@ -28,13 +28,13 @@ SafeHaven Architecture.pdf = detailed overview of our SafeHaven AWS implementati
 
 #### Lambda Functions
 
-deeplens-face-detection.zip = 
+deeplens-face-detection.zip
 
-safe-haven-analyse-faces-function.zip = 
+safe-haven-analyse-faces-function.zip
 
-safe-haven-rekognition-image-upload.zip = 
+safe-haven-rekognition-image-upload.zip
 
-safe-haven-who-is-at-the-door-function.zip = 
+safe-haven-who-is-at-the-door-function.zip
 
 
 
