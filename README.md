@@ -1,5 +1,5 @@
 # SafeHaven: Real-Time Reassurance. Re:invented. 
-## Submission for AWS DeepLens Challenge (the “Hackathon”) #AWSDeepLensChallenge
+### Submission for AWS DeepLens Challenge (the “Hackathon”) #AWSDeepLensChallenge
 ### Devpost Entry - https://devpost.com/software/safehaven-d7rauk
 ### YouTube Demo Video - https://youtu.be/5DDRvRHZ1Qs
 
