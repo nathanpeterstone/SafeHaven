@@ -33,10 +33,10 @@ safe-haven-who-is-at-the-door-function.zip =
 
 #### Folder structure in the AWS S3 Bucket called “safe-haven-images” (also see Architecture PDF)
 
-  **DeepLens**: Output from deeplens – when a face is detected, the whole frame image is uploaded. A trigger on this bucket runs the lambda function “safe-haven-analyse-faces-function”
+-- **DeepLens**: Output from deeplens – when a face is detected, the whole frame image is uploaded. A trigger on this bucket runs the lambda function “safe-haven-analyse-faces-function”
 
-  **Rekognition-Images**: Where Rekognition Collection images are uploaded by a user. The user has already tagged the image with meta data “x-amz-meta-fullname”, which holds the person’s name. A trigger on this folder goes to Rekognition, which adds the image to a Rekognition Collection; and returns a Unique ID, which is then uploaded (along with meta data) to a DynamoDB table.
+-- **Rekognition-Images**: Where Rekognition Collection images are uploaded by a user. The user has already tagged the image with meta data “x-amz-meta-fullname”, which holds the person’s name. A trigger on this folder goes to Rekognition, which adds the image to a Rekognition Collection; and returns a Unique ID, which is then uploaded (along with meta data) to a DynamoDB table.
 
-  **Unknown-Images**: If the lambda function “safe-haven-analyse-faces-function” cannot match the face returned from Rekognition, then that image is stored in “Unknown-Images” and a message is posted to an SNS topic, which is subscribed to by a SMS recipient.
+-- **Unknown-Images**: If the lambda function “safe-haven-analyse-faces-function” cannot match the face returned from Rekognition, then that image is stored in “Unknown-Images” and a message is posted to an SNS topic, which is subscribed to by a SMS recipient.
 
 
