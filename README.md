@@ -1,5 +1,6 @@
 # SafeHaven: Real-Time Reassurance. Re:invented. 
 # Submission for AWS DeepLens Challenge (the “Hackathon”) #AWSDeepLensChallenge
+# https://devpost.com/software/safehaven-d7rauk
 
 SafeHaven was designed to protect vulnerable people living alone, by enabling them to identify "Who Is At The Door" using an Alexa Skill. Unknown visitors trigger SMS or email alerts to relatives or carers, via an SNS subscription. 
 
