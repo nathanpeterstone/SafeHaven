@@ -91,11 +91,11 @@ a.	Edit the ‘greengrassHelloWorld.py’ script, change the bucket names in lin
 
 2)	Create **‘safe-haven-rekognition-image-upload’** lambda function, selecting **Python 2.7**. The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
 
-2.1) Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
+a. Edit the **‘lambda_function.py’** script, change line 11 to be the DynamoDB table for the Rekognition Collection
 
-2.2) Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
+b. Edit the **‘lambda_function.py’** script, change line 14 to be the Rekognition Collection name (as per the Rekognition setup)
 
-2.3) Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
+c. Add a trigger from **S3**, using the bucket created earlier, the prefix **‘Rekognition-Images/’**, Event Type **ObjectCreated**, Suffix **jpg**
 
 
 3)	Create **‘safe-haven-analyse-faces-function’** lambda function, selecting **Python 2.7**.  The zip file included here should be uploaded.  This function should run under the **LambdaRekognitionRole**.
@@ -118,7 +118,7 @@ e.	Add the following Environment variables:
 f.	Add a trigger from **S3**, using the bucket created earlier, the prefix **‘DeepLens/’**, Event Type **ObjectCreated**, Suffix **jpg**
 
 
-4)	Create ‘safe-haven-who-is-at-the-door-function’ lambda function, selecting Python 3.6.  The zip file included here should be uploaded.  This function should run under the DoorLambdaAlexaSkillRole.
+4)	Create **‘safe-haven-who-is-at-the-door-function’** lambda function, selecting **Python 3.6**.  The zip file included here should be uploaded.  This function should run under the **DoorLambdaAlexaSkillRole**.
 
 -- a.	Add the following Environment variables:
 
