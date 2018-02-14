@@ -82,7 +82,7 @@ DoorLambdaAlexaSkillRole – Attach a new policy called ‘AlexaSkillPolicy’ �
 
 ## Alexa Skill
 
-Need to create a new Alexa skill, and get the Skill Id (as this is required within the lambda function configuration)
+You will need to create a new Alexa skill, and get the Skill Id (as this is required within the lambda function configuration)
 
 Alexa Skill setup is beyond the scope of this guide.
 
