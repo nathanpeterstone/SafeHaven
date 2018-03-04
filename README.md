@@ -2,6 +2,8 @@
 ### Submission for AWS DeepLens Challenge (the “Hackathon”) #AWSDeepLensChallenge
 ### Devpost Entry - https://devpost.com/software/safehaven-d7rauk
 ### YouTube Demo Video - https://youtu.be/5DDRvRHZ1Qs
+### LinkedIn Nathan Stone - https://www.linkedin.com/in/na7hans7one/
+### LinkedIn Peter McLean - https://www.linkedin.com/in/peter-mclean/
 
 
 SafeHaven was designed to protect vulnerable people living alone, by enabling them to identify "Who Is At The Door" using an Alexa Skill. Unknown visitors trigger SMS or email alerts to relatives or carers, via an SNS subscription. 
